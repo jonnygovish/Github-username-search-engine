@@ -1,6 +1,5 @@
 //Back end logic
-//var apiKey = require('./../.env').apiKey;
-var apiKey = "ee9dbb36843ae12d1a5da073b5a2c361858f5082"
+var apiKey = require('./../.env').apiKey;
 
 function Repos(){
 }
