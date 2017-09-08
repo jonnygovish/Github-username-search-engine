@@ -1,0 +1,22 @@
+{
+  "name": "github-username-search-engine",
+  "description": "A search engine for github users",
+  "main": "index.html",
+  "authors": [
+    "John Mutavi"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jonnygovish/Github-username-search-engine",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  }
+}
