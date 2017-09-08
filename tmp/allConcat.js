@@ -12,7 +12,7 @@ $(document).ready(function(){
         $('#display-name').text(userInput);
         //clearing the input field after submit
         $('#username').val("");
-        currentReposObject.getRepos();
+        currentReposObject.getRepos(userInput);
 //        debugger;
     });
 });
