@@ -1,11 +1,1 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(document).ready(function(){
-    $('#form-group').submit(function(event){
-        event.preventDefault();
-        var userInput = $('#username').val();
-        debugger;
-        console.log(userInput)
-        $('#username').val("");
-    });
-});
-},{}]},{},[1]);
+!function e(n,o,r){function t(s,i){if(!o[s]){if(!n[s]){var a="function"==typeof require&&require;if(!i&&a)return a(s,!0);if(u)return u(s,!0);var c=new Error("Cannot find module '"+s+"'");throw c.code="MODULE_NOT_FOUND",c}var f=o[s]={exports:{}};n[s][0].call(f.exports,function(e){var o=n[s][1][e];return t(o||e)},f,f.exports,e,n,o,r)}return o[s].exports}for(var u="function"==typeof require&&require,s=0;s<r.length;s++)t(r[s]);return t}({1:[function(e,n,o){function r(){}r.prototype.getRepos=function(){$.get("https://api.github.com/users/jonnygovish?access_token=ee9dbb36843ae12d1a5da073b5a2c361858f5082").then(function(e){console.log(e)}).fail(function(e){console.log(e.responseJSON.message)})},o.reposModule=r},{}],2:[function(e,n,o){var r=e("./../js/script.js").reposModule;$(document).ready(function(){var e=new r;$("#form-group").submit(function(n){n.preventDefault();var o=$("#username").val();console.log(o),$("#display-name").text(o),$("#username").val(""),e.getRepos()})})},{"./../js/script.js":1}]},{},[2]);
