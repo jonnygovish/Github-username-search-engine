@@ -13,6 +13,5 @@ $(document).ready(function(){
         //clearing the input field after submit
         $('#username').val("");
         currentReposObject.getRepos(userInput);
-//        debugger;
     });
 });
