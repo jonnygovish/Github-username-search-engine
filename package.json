@@ -1,0 +1,19 @@
+{
+  "name": "github-username-search-engine",
+  "version": "1.0.0",
+  "description": "A search engine for github users",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnygovish/Github-username-search-engine.git"
+  },
+  "author": "John Mutavi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonnygovish/Github-username-search-engine/issues"
+  },
+  "homepage": "https://github.com/jonnygovish/Github-username-search-engine#readme"
+}
