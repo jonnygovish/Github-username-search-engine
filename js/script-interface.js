@@ -3,7 +3,7 @@ var Repos = require('./../js/script.js').reposModule;
 
 $(document).ready(function(){
     var currentReposObject = new Repos();
-    $('#form-group').submit(function(event){
+    $('#form-group').click(function(event){
         event.preventDefault();
         //storing the user input
         var userInput = $('#username').val();
@@ -14,5 +14,6 @@ $(document).ready(function(){
         //clearing the input field after submit
         $('#username').val("");
         currentReposObject.getRepos(userInput);
+        $('#display-info').html("");
     });
 });
