@@ -9,7 +9,8 @@ $(document).ready(function(){
         var userInput = $('#username').val();
         console.log(userInput);
         //Displ#y the name
-        $('#display-name').text(userInput);
+        $('#output-username').text(userInput);
+        debugger;
         //clearing the input field after submit
         $('#username').val("");
         currentReposObject.getRepos(userInput);
