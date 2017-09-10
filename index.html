@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="build/css/vendor.css">
@@ -8,37 +9,48 @@
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Github User Search Engine</title>
 </head>
+
 <body>
-   <div class="jumbotron">
-       <h1>Github Username Search Engine </h1>
-   </div>
-   <div class="container">
-       
-   <main class="box">
-   <div class="row">
-       <div class="col-md-6">
-           
-       <form  id="form-group">
-           <label for="username">Github Username</label>
-           <input type="text" class="form-control" name="Github username" id="username" placeholder="Github Username">
-           <button id="button-search" type="button" class="btn-primary" name="button">Search</button>
-       </form>
-          <div id="output-username">
-              
-          </div>
-           
-       </div>
-       <div class="col-md-6">
-           
-       <div>
-       <ul id="display-info">
-           
-       </ul>
-       </div>
-    
-       </div>
-   </div>
-   </main>
-   </div>
+    <div class="jumbotron">
+        <h1>Github Username Search Engine </h1>
+    </div>
+    <div class="container">
+        <form id="form-group" class="form-inline">
+            <label for="username">Github Username</label>
+            <input type="text" class="form-control" name="Github username" id="username" placeholder="Github Username">
+            <button id="button-search" type="submit" class="btn-primary" name="button">Search</button>
+        </form>
+    </div>
+    <div class="container" id="results">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title"><span id="output-name"></span> </h2>
+                    </div>
+                    <div class="panel-body" id="output-avatar">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Public Repos:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="display-info">
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
