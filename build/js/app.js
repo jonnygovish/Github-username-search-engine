@@ -10,10 +10,11 @@ function Repos() {
 Repos.prototype.getRepos = function (userInput) {
     $.get('https://api.github.com/users/' + userInput + '?access_token=' + apiKey).then(function (response) {
         console.log(response);
+        $('#results').show();
         $('#output-name').html(response.name);
         $('#output-avatar').html('<img id="user-avatarImage" src=' + response.avatar_url + '>');
     }).fail(function (error) {
-
+        $('#error').show().text("We couldn’t find any users matching "+"'"+ userInput +"'");
     });
     $.get('https://api.github.com/users/' + userInput + '/repos?access_token=' + apiKey).then(function (response) {
         for (var n = 0; n <= response.length; n++)
@@ -39,10 +40,8 @@ $(document).ready(function(){
         //storing the user input
         var userInput = $('#username').val();
         console.log(userInput);
-        $('#results').show();
         //Displ#y the name
         $('#output-username').text(userInput);
-        debugger;
         //clearing the input field after submit
         $('#username').val("");
         currentReposObject.getRepos(userInput);
