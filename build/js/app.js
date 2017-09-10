@@ -10,7 +10,8 @@ function Repos() {
 Repos.prototype.getRepos = function (userInput) {
     $.get('https://api.github.com/users/' + userInput + '?access_token=' + apiKey).then(function (response) {
         console.log(response);
-        $('#output-username').html('<h2 id="user-name">' + response.name + '</h2><img id="user-avatarImage" src=' + response.avatar_url + '>');
+        $('#output-name').html(response.name);
+        $('#output-avatar').html('<img id="user-avatarImage" src=' + response.avatar_url + '>');
     }).fail(function (error) {
 
     });
@@ -31,14 +32,14 @@ exports.reposModule = Repos;
 },{"./../.env":1}],3:[function(require,module,exports){
 
 var Repos = require('./../js/script.js').reposModule;
-
 $(document).ready(function(){
     var currentReposObject = new Repos();
-    $('#form-group').click(function(event){
+    $('#form-group').submit(function(event){
         event.preventDefault();
         //storing the user input
         var userInput = $('#username').val();
         console.log(userInput);
+        $('#results').show();
         //Displ#y the name
         $('#output-username').text(userInput);
         debugger;
